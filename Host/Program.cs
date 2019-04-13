@@ -10,10 +10,10 @@ namespace Host
         static void Main(string[] args)
         {
             var score = 0d;
-            while(score < 490)
+            //while(score < 490)
             {
                 var d = new Darwin(x => new Simulator(new DnaCleaner(x)).AverageScore(100), 200);
-                var dna = d.Evolve(1000);
+                var dna = d.Evolve(10000);
                 var c = new DnaCleaner(dna);
                 var s = new Simulator(c);
                 score = s.AverageScore();

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime;
 using Lib.Domain;
-using Lib.Simulation;
 
 namespace Lib.Evolution
 {

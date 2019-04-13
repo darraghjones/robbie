@@ -5,7 +5,7 @@ namespace Lib.Domain
     public static class Random
     {
         //private static readonly ThreadLocal<Random> random = new ThreadLocal<Random>(() => new Random());
-        private static readonly System.Random random = new System.Random(0);
+        private static readonly System.Random random = new System.Random();
 
         public static int Next(int maxValue)
         {

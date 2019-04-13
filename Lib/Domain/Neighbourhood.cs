@@ -16,5 +16,14 @@ namespace Lib.Domain
             West = west;
             Current = current;
         }
+
+        public override string ToString()
+        {
+            return $"\t\t {North.ToString().Substring(0,1)}\n" +
+                   $"\t\t{West.ToString().Substring(0, 1)}" +
+                   $"{Current.ToString().Substring(0, 1)}" +
+                   $"{East.ToString().Substring(0, 1)}\n" +
+                   $"\t\t {South.ToString().Substring(0, 1)}\n\n";
+        }
     }
 }

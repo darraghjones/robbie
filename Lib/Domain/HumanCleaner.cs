@@ -1,6 +1,6 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Lib.Domain
 {
@@ -43,6 +43,18 @@ namespace Lib.Domain
             foreach (var west in values)
             foreach (var current in values)
                 yield return humanCleaner.Move(new Neighbourhood(north, south, east, west, current));
+        }
+
+        public static void DrawDna()
+        {
+            var i = 1;
+            var values = new[] { Cell.Empty, Cell.Can, Cell.Wall };
+            foreach (var north in values)
+            foreach (var south in values)
+            foreach (var east in values)
+            foreach (var west in values)
+            foreach (var current in values)
+                Console.Write($"{i++}{new Neighbourhood(north, south, east, west, current)}");
         }
 
         #endregion
